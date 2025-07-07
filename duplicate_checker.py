@@ -50,9 +50,9 @@ def check_duplicates_by_id(file_path):
         return False
 
 def main():
-    print(Fore.YELLOW + '═' * 40)
-    print(Fore.YELLOW + ' FiveM Items Duplicate ID Checker '.center(40, '═'))
-    print(Fore.YELLOW + '═' * 40 + Style.RESET_ALL)
+    print(Fore.YELLOW + '═' * 50)
+    print(Fore.YELLOW + ' FiveM ox_inventory Items Duplicate ID Checker '.center(50, '═'))
+    print(Fore.YELLOW + '═' * 50 + Style.RESET_ALL)
     file_path = "items.lua"
     has_duplicates = check_duplicates_by_id(file_path)
     if has_duplicates:
