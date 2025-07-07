@@ -1,6 +1,6 @@
-# items-duplicator
+# FiveM ox_inventory Items Duplicate ID Checker
 
-This project is a simple tool for FiveM server developers using the [ox_inventory](https://github.com/overextended/ox_inventory) system.
+This project is a tool for FiveM server developers to check for duplicate item IDs in their [ox_inventory](https://github.com/overextended/ox_inventory) items.lua configuration.
 
 ## Purpose
 
