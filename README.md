@@ -13,6 +13,10 @@ The script checks your `items.lua` file for duplicate item IDs. It helps you avo
 - Designed for FiveM servers using ox_inventory
 - Helps keep your inventory unique and error-free
 
+## Example Output
+
+![Console Example](console.jpg)
+
 ## Usage
 1. Place `duplicate_checker.py` in the same folder as your `items.lua` file.
 2. Make sure you have Python 3.x installed.
