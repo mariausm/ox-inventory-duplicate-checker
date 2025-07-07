@@ -22,19 +22,23 @@ def check_duplicates_by_id(file_path):
             content = file.read()
         pattern = r"\[['\"]([^'\"]+)['\"]\]\s*=\s*\{"  # Find all item IDs
         ids = defaultdict(int)
+        all_ids = []
         matches = re.finditer(pattern, content)
         for match in matches:
             item_id = match.group(1)
+            all_ids.append(item_id)
             ids[item_id] += 1
+        total_ids_found = len(all_ids)
+        unique_ids = len(ids)
         found_duplicates = False
-        dubl_lines = [f'Total item IDs found: {len(ids)}', '']
+        dubl_lines = [f'Total item IDs found: {total_ids_found}', '']
         for item_id, count in ids.items():
             if count > 1:
                 found_duplicates = True
                 dubl_lines.append(Fore.RED + f'⚠️  DUPLICATE!  Item ID: {item_id}  (count: {count})' + Style.RESET_ALL)
         if not found_duplicates:
             dubl_lines.append(Fore.GREEN + '✅ No duplicate item IDs found!' + Style.RESET_ALL)
-        stat_lines = [f'Unique item IDs: {len(ids)}']
+        stat_lines = [f'Unique item IDs: {unique_ids}']
         print_frame('ITEM ID DUPLICATE CHECK', dubl_lines, color=Fore.YELLOW)
         print_frame('STATISTICS', stat_lines, color=Fore.YELLOW)
         return found_duplicates
