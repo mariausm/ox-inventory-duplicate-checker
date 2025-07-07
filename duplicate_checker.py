@@ -15,34 +15,34 @@ def print_frame(title, content_lines, color=Fore.YELLOW):
 
 def check_duplicates_by_id(file_path):
     """
-    Patikrina items.lua failą ir ieško dublikatų pagal item ID
+    Checks items.lua for duplicate item IDs
     """
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
             content = file.read()
-        pattern = r"\[['\"]([^'\"]+)['\"]\]\s*=\s*\{"  # Suranda visus item ID
+        pattern = r"\[['\"]([^'\"]+)['\"]\]\s*=\s*\{"  # Find all item IDs
         ids = defaultdict(int)
         matches = re.finditer(pattern, content)
         for match in matches:
             item_id = match.group(1)
             ids[item_id] += 1
         found_duplicates = False
-        dubl_lines = [f'Rasta item ID: {len(ids)}', '']
+        dubl_lines = [f'Total item IDs found: {len(ids)}', '']
         for item_id, count in ids.items():
             if count > 1:
                 found_duplicates = True
-                dubl_lines.append(Fore.RED + f'⚠️  DUBLIKATAS!  Item ID: {item_id}  (kartų: {count})' + Style.RESET_ALL)
+                dubl_lines.append(Fore.RED + f'⚠️  DUPLICATE!  Item ID: {item_id}  (count: {count})' + Style.RESET_ALL)
         if not found_duplicates:
-            dubl_lines.append(Fore.GREEN + '✅ Dublikatų pagal item ID nerasta!' + Style.RESET_ALL)
-        stat_lines = [f'Viso unikalių item ID: {len(ids)}']
-        print_frame('ITEM ID DUBLIKATŲ PATIKRINIMAS', dubl_lines, color=Fore.YELLOW)
-        print_frame('STATISTIKA', stat_lines, color=Fore.YELLOW)
+            dubl_lines.append(Fore.GREEN + '✅ No duplicate item IDs found!' + Style.RESET_ALL)
+        stat_lines = [f'Unique item IDs: {len(ids)}']
+        print_frame('ITEM ID DUPLICATE CHECK', dubl_lines, color=Fore.YELLOW)
+        print_frame('STATISTICS', stat_lines, color=Fore.YELLOW)
         return found_duplicates
     except FileNotFoundError:
-        print_frame('KLAIDA', [Fore.RED + f'❌ Failas "{file_path}" nerastas!' + Style.RESET_ALL], color=Fore.RED)
+        print_frame('ERROR', [Fore.RED + f'❌ File "{file_path}" not found!' + Style.RESET_ALL], color=Fore.RED)
         return False
     except Exception as e:
-        print_frame('KLAIDA', [Fore.RED + f'❌ Klaida: {e}' + Style.RESET_ALL], color=Fore.RED)
+        print_frame('ERROR', [Fore.RED + f'❌ Error: {e}' + Style.RESET_ALL], color=Fore.RED)
         return False
 
 def main():
@@ -52,9 +52,9 @@ def main():
     file_path = "items.lua"
     has_duplicates = check_duplicates_by_id(file_path)
     if has_duplicates:
-        print(Fore.RED + '\n⚠️  DUBLIKATŲ PAGAL ITEM ID RASTA! Rekomenduojama juos ištaisyti.' + Style.RESET_ALL)
+        print(Fore.RED + '\n⚠️  DUPLICATE ITEM IDs FOUND! Please resolve them.' + Style.RESET_ALL)
     else:
-        print(Fore.GREEN + '\n✅ Visi item ID unikalūs!' + Style.RESET_ALL)
+        print(Fore.GREEN + '\n✅ All item IDs are unique!' + Style.RESET_ALL)
 
 if __name__ == "__main__":
     main()
