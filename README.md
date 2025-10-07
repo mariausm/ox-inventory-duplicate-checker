@@ -1,6 +1,6 @@
 # FiveM ox_inventory Items Duplicate ID Checker
 
-This project is a tool for FiveM server developers to check for duplicate item IDs in their [ox_inventory](https://github.com/overextended/ox_inventory) items.lua configuration.
+This project is a tool for FiveM server developers to check for duplicate item IDs in their [ox_inventory](https://github.com/CommunityOx/ox_inventory) items.lua configuration.
 
 ## Purpose
 
@@ -16,16 +16,20 @@ The script checks your `items.lua` file for duplicate item IDs. It helps you avo
 - **Fast scanning** of large item files
 - **Designed specifically for FiveM ox_inventory**
 
+## Example Output
+
+![Console Example](console.svg)
+
 ## Installation
 
 ### Required Python Modules
 ```bash
-pip install textual rich pyperclip
+pip install -r requirements.txt
 ```
 
-### Optional (for enhanced experience)
+### Manual Installation (Alternative)
 ```bash
-pip install colorama
+pip install textual rich pyperclip
 ```
 
 ## Usage
@@ -33,7 +37,7 @@ pip install colorama
 2. Make sure you have Python 3.8+ installed.
 3. Install required modules:
    ```
-   pip install textual rich pyperclip
+   pip install -r requirements.txt
    ```
 4. Run the script:
    ```
