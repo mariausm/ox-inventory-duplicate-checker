@@ -645,12 +645,6 @@ return {
 		consume = 0,
 	},
 
-	['casino_coke'] = {
-		label = 'casino coke',
-		weight = 0,
-		close = true,
-		consume = 0,
-	},
 
 	['casino_donut'] = {
 		label = 'casino donut',
@@ -665,7 +659,6 @@ return {
 		close = true,
 		consume = 0,
 	},
-
 	['casino_luckypotion'] = {
 		label = 'casino luckypotion',
 		weight = 0,
@@ -679,8 +672,49 @@ return {
 		close = true,
 		consume = 0,
 	},
+	
 
 	['casino_sandwitch'] = {
+		label = 'casino sandwitch',
+		weight = 0,
+		close = true,
+		consume = 0,
+	},
+		['casino_sandwitch'] = {
+		label = 'casino sandwitch',
+		weight = 0,
+		close = true,
+		consume = 0,
+	},
+
+	['casino_sprite'] = {
+		label = 'casino sprite',
+		weight = 0,
+		close = true,
+		consume = 0,
+	},
+	['casino_luckypotion'] = {
+		label = 'casino luckypotion',
+		weight = 0,
+		close = true,
+		consume = 0,
+	},
+
+	['casino_psqs'] = {
+		label = 'Casino Ps & Qs',
+		weight = 0,
+		close = true,
+		consume = 0,
+	},
+	
+
+	['casino_sandwitch'] = {
+		label = 'casino sandwitch',
+		weight = 0,
+		close = true,
+		consume = 0,
+	},
+		['casino_sandwitch'] = {
 		label = 'casino sandwitch',
 		weight = 0,
 		close = true,
@@ -742,7 +776,40 @@ return {
 		weight = 100,
 		stack = false
 	},
+	['blueprint_assaultsmg'] = {
+		label = 'Blueprint - Assault SMG',
+		description = 'Blueprint for the Assault SMG.',
+		weight = 100,
+		stack = false
+	},
 
+	['blueprint_bullpuprifle'] = {
+		label = 'Blueprint - Bullpup Rifle',
+		description = 'Blueprint for the Bullpup Rifle.',
+		weight = 100,
+		stack = false
+	},
+
+	['blueprint_bullpuprifle_mk2'] = {
+		label = 'Blueprint - Bullpup Rifle MK2',
+		description = 'Blueprint for the Bullpup Rifle MK2.',
+		weight = 100,
+		stack = false
+	},
+
+	['blueprint_bullpupshotgun'] = {
+		label = 'Blueprint - Bullpup Shotgun',
+		description = 'Blueprint for the Bullpup Shotgun.',
+		weight = 100,
+		stack = false
+	},
+	
+		['casino_coke'] = {
+		label = 'casino coke',
+		weight = 0,
+		close = true,
+		consume = 0,
+	},
 	['blueprint_assaultsmg'] = {
 		label = 'Blueprint - Assault SMG',
 		description = 'Blueprint for the Assault SMG.',
