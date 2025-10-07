@@ -34,6 +34,9 @@ pip install -r requirements.txt
 - Shows how many times each item appears
 - Only checks item IDs, not labels or other fields
 
+## Keywords
+FiveM, ox_inventory, duplicate checker, item scanner, inventory tool, Lua checker, FiveM utility, terminal UI, progress bar, clipboard, item detection, duplicate detection, ox_inventory items, FiveM inventory, item scanner, duplicate scanner, ox_inventory scanner, FiveM duplicate checker, inventory duplicate finder, ox_inventory duplicate finder, item ID checker, FiveM item checker, ox_inventory item checker, duplicate item finder, FiveM duplicate item finder, ox_inventory duplicate item finder, item duplicate detector, FiveM item duplicate detector, ox_inventory item duplicate detector, duplicate item scanner, FiveM duplicate item scanner, ox_inventory duplicate item scanner, item ID duplicate checker, FiveM item ID duplicate checker, ox_inventory item ID duplicate checker, duplicate item ID finder, FiveM duplicate item ID finder, ox_inventory duplicate item ID finder, item duplicate ID detector, FiveM item duplicate ID detector, ox_inventory item duplicate ID detector, duplicate item ID scanner, FiveM duplicate item ID scanner, ox_inventory duplicate item ID scanner
+
 ## License
 MIT License - see [LICENSE](LICENSE) file for details.
 
