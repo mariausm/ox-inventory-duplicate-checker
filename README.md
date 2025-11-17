@@ -1,3 +1,6 @@
+Here’s a polished version of your README with your new usage section integrated and formatted consistently:
+
+````markdown
 # FiveM ox_inventory Duplicate Item Checker
 
 [![FiveM](https://img.shields.io/badge/FiveM-Script-blue)](https://fivem.net/)
@@ -24,35 +27,53 @@ Scans your `items.lua` file and finds duplicate item IDs that can cause server e
 ## Installation
 ```bash
 pip install -r requirements.txt
-```
+````
 
 ## Usage
-1. Put `duplicate_checker.py` in same folder as `items.lua`
-2. Run: `python duplicate_checker.py`
-3. Use keyboard shortcuts:
-   - `R` - Refresh scan
-   - `C` - Copy selected duplicate
-   - `Q` - Quit
+
+1. Place `duplicate_checker.py` anywhere you like.
+2. Run the script:
+
+   ```bash
+   python duplicate_checker.py
+   ```
+3. When prompted, paste the full paths for:
+
+   * `items.lua` file
+   * Images folder
+4. Choose an option:
+
+   * `1` - Find duplicate images
+   * `2` - Find missing images
+5. Use keyboard shortcuts in the app:
+
+   * `R` - Refresh scan
+   * `C` - Copy selected item/image to clipboard
+   * `Q` - Quit the application
 
 ## What it checks
-- Finds duplicate item IDs like `['lighter']` in your `items.lua`
-- Shows how many times each item appears
-- Only checks item IDs, not labels or other fields
+
+* Finds duplicate item IDs like `['lighter']` in your `items.lua`
+* Shows how many times each item appears
+* Only checks item IDs, not labels or other fields
 
 ## FAQ
-**Q: Why do I need this tool?**  
+
+**Q: Why do I need this tool?**
 A: Duplicate item IDs in ox_inventory can cause server crashes, inventory bugs, and item conflicts. This tool helps you find and fix them before they cause problems.
 
-**Q: Does it work with other inventory systems?**  
+**Q: Does it work with other inventory systems?**
 A: This tool is specifically designed for ox_inventory `items.lua` files. It won't work with other inventory systems.
 
-**Q: Is it safe to use?**  
+**Q: Is it safe to use?**
 A: Yes! This tool only reads your `items.lua` file and doesn't modify anything. It's completely safe to use on production servers.
 
 ## Keywords
+
 FiveM, ox_inventory, duplicate checker, item scanner, inventory tool, Lua checker, FiveM utility, terminal UI, progress bar, clipboard, item detection, duplicate detection, ox_inventory items, FiveM inventory, item scanner, duplicate scanner, ox_inventory scanner, FiveM duplicate checker, inventory duplicate finder, ox_inventory duplicate finder, item ID checker, FiveM item checker, ox_inventory item checker, duplicate item finder, FiveM duplicate item finder, ox_inventory duplicate item finder, item duplicate detector, FiveM item duplicate detector, ox_inventory item duplicate detector, duplicate item scanner, FiveM duplicate item scanner, ox_inventory duplicate item scanner, item ID duplicate checker, FiveM item ID duplicate checker, ox_inventory item ID duplicate checker, duplicate item ID finder, FiveM duplicate item ID finder, ox_inventory duplicate item ID finder, item duplicate ID detector, FiveM item duplicate ID detector, ox_inventory item duplicate ID detector, duplicate item ID scanner, FiveM duplicate item ID scanner, ox_inventory duplicate item ID scanner
 
 ## License
+
 MIT License - see [LICENSE](LICENSE) file for details.
 
 **Created by Marius.**
